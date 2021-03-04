@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add new item</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-content class="ion-padding">
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input type="text" [(ngModel)]="nieuwitem.description" name="nieuwitem"></ion-input>
+        <ion-label position="floating">Priority</ion-label>
+        <ion-select placeholder="Select a priority-level" [(ngModel)]="nieuwitem.priority">
+          <ion-select-option value="1">HIGH</ion-select-option>
+          <ion-select-option value="2">MEDIUM</ion-select-option>
+          <ion-select-option value="3">LOW</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+    </ion-list>
+
+    <ion-button expand="full" color="primary" (click)="save()">Opslaan</ion-button>
+  </ion-content>
+
+</ion-content>
